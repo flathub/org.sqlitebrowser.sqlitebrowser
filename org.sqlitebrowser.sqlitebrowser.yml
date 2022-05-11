@@ -1,6 +1,6 @@
 app-id: org.sqlitebrowser.sqlitebrowser
 runtime: org.kde.Platform
-runtime-version: '5.15-21.08'
+runtime-version: 5.15-21.08
 sdk: org.kde.Sdk
 command: sqlitebrowser
 rename-icon: sqlitebrowser
@@ -25,8 +25,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/sqlitebrowser/sqlitebrowser.git
-        tag: v3.12.2
-        commit: 1955cb13b483fa66849bce152f302fe6817bfadc
+        tag: 3.12.0
+        commit: 0dbe9b5f91234ed9b76535fc8ec37a5b8f8eb65c
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
