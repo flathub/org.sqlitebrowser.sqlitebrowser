@@ -29,7 +29,7 @@ modules:
         commit: 1955cb13b483fa66849bce152f302fe6817bfadc
         x-checker-data:
           type: git
-          tag-pattern: ^([\d.]+)$
+          tag-pattern: ^v([\d.]+)$
       - type: patch
         path: appdata.patch
       - type: patch
