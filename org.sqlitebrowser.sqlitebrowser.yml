@@ -15,8 +15,28 @@ finish-args:
   - --share=ipc
 cleanup:
   - /include
+  - "*.la"
 
 modules:
+  - tcl.json
+  - name: sqlcipher
+    buildsystem: autotools
+    config-opts:
+      - --enable-threadsafe
+      - --enable-cross-thread-connections
+      - --enable-releasemode
+      - --disable-static
+      - --with-crypto-lib
+      - --enable-tempstore=yes
+    sources:
+      - type: git
+        url: https://github.com/sqlcipher/sqlcipher.git
+        tag: v4.5.2
+        commit: 104f2d2fda33f4c179960d628e7446f3869ef4ed
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
+
   - name: sqlitebrowser
     buildsystem: cmake-ninja
     config-opts:
