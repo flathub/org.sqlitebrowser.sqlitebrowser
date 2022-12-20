@@ -1,6 +1,6 @@
 app-id: org.sqlitebrowser.sqlitebrowser
 runtime: org.kde.Platform
-runtime-version: '5.15-21.08'
+runtime-version: 5.15-21.08
 sdk: org.kde.Sdk
 command: sqlitebrowser
 rename-icon: sqlitebrowser
@@ -15,7 +15,7 @@ finish-args:
   - --share=ipc
 cleanup:
   - /include
-  - "*.la"
+  - '*.la'
 
 modules:
   - tcl.json
@@ -31,8 +31,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/sqlcipher/sqlcipher.git
-        tag: v4.5.2
-        commit: 104f2d2fda33f4c179960d628e7446f3869ef4ed
+        tag: v4.5.3
+        commit: 8763afaf13231cb1fc835b52c94ada23f8e47b3d
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
