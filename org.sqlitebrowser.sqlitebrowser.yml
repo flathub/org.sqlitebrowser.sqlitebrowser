@@ -21,13 +21,14 @@ modules:
   - tcl.json
   - name: sqlcipher
     buildsystem: autotools
+    build-options:
+      cflags: -DSQLITE_HAS_CODEC
+      ldflags: -lcrypto
     config-opts:
-      - --enable-threadsafe
-      - --enable-cross-thread-connections
+      - --enable-tempstore=yes
       - --enable-releasemode
       - --disable-static
-      - --with-crypto-lib
-      - --enable-tempstore=yes
+      - --disable-tcl
     sources:
       - type: git
         url: https://github.com/sqlcipher/sqlcipher.git
@@ -41,6 +42,7 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - -DFORCE_INTERNAL_QSCINTILLA=TRUE
+      - -Dsqlcipher=1
       - -Wno-dev
     sources:
       - type: git
