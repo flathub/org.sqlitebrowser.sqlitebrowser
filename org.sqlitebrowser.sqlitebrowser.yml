@@ -32,8 +32,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/sqlcipher/sqlcipher.git
-        tag: v4.5.3
-        commit: 8763afaf13231cb1fc835b52c94ada23f8e47b3d
+        tag: v4.5.4
+        commit: c7f9a1c348fde215ac18ce2b78a62ce8111a3743
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
