@@ -32,8 +32,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/sqlcipher/sqlcipher.git
-        tag: v4.5.6
-        commit: befb0709091fa29fa0f3b7eb3944de7b753d1a44
+        tag: v4.6.0
+        commit: 569876dd07d402cb9367987229fcf9c49c815ed8
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -56,3 +56,5 @@ modules:
         path: appdata.patch
       - type: patch
         path: appdata-update.patch
+      - type: patch
+        path: appdata-lint.patch
