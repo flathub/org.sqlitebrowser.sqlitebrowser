@@ -47,14 +47,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/sqlitebrowser/sqlitebrowser.git
-        tag: v3.12.2
-        commit: 1955cb13b483fa66849bce152f302fe6817bfadc
+        tag: v3.13.0
+        commit: 5733cb75d623434a3b06f497e919cca1e206cf03
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-      - type: patch
-        path: appdata.patch
-      - type: patch
-        path: appdata-update.patch
-      - type: patch
-        path: appdata-lint.patch
