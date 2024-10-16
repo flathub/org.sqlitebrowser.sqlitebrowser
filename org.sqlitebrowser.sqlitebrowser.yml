@@ -47,8 +47,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/sqlitebrowser/sqlitebrowser.git
-        tag: v3.13.0
-        commit: 5733cb75d623434a3b06f497e919cca1e206cf03
+        tag: v3.13.1
+        commit: 5d84f53f85570a31767548cded89c96de6ff70ae
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
