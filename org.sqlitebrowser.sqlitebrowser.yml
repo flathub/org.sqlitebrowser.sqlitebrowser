@@ -22,18 +22,20 @@ modules:
   - name: sqlcipher
     buildsystem: autotools
     build-options:
-      cflags: -DSQLITE_HAS_CODEC
+      cflags: -DSQLITE_HAS_CODEC -DSQLITE_EXTRA_INIT=sqlcipher_extra_init -DSQLITE_EXTRA_SHUTDOWN=sqlcipher_extra_shutdown
       ldflags: -lcrypto
     config-opts:
-      - --enable-tempstore=yes
-      - --enable-releasemode
+      - --enable-shared
       - --disable-static
+      - --with-tempstore=yes
       - --disable-tcl
+    make-install-args:
+      - includedir=/app/include/sqlcipher
     sources:
       - type: git
         url: https://github.com/sqlcipher/sqlcipher.git
-        tag: v4.6.1
-        commit: c5bd336ece77922433aaf6d6fe8cf203b0c299d5
+        tag: v4.9.0
+        commit: c7e811b399379c948b423872ad7ba91d2ce38434
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
