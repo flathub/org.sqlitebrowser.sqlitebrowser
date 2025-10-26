@@ -44,6 +44,7 @@ modules:
       - -DFORCE_INTERNAL_QSCINTILLA=TRUE
       - -Dsqlcipher=1
       - -Wno-dev
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/sqlitebrowser/sqlitebrowser.git
