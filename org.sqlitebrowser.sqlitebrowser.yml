@@ -22,7 +22,7 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - -DFORCE_INTERNAL_QSCINTILLA=TRUE
-      - -Dsqlcipher=1
+      - -Dsqlcipher=0
       - -Wno-dev
       - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
