@@ -18,22 +18,6 @@ cleanup:
   - '*.la'
 
 modules:
-  - tcl.json
-  - name: sqlcipher
-    buildsystem: autotools
-    build-options:
-      cflags: -DSQLITE_HAS_CODEC
-      ldflags: -lcrypto
-    config-opts:
-      - --enable-tempstore=yes
-      - --enable-releasemode
-      - --disable-static
-      - --disable-tcl
-    sources:
-      - type: git
-        url: https://github.com/sqlcipher/sqlcipher.git
-        tag: v4.6.1
-
   - name: sqlitebrowser
     buildsystem: cmake-ninja
     config-opts:
